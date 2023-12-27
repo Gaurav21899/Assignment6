@@ -12,7 +12,7 @@ with arcpy.da.UpdateCursor(fc_path, fields_list) as u_cursor:
     for row in u_cursor:
         establishment_year = row[1]
 
-        if establishment_year < 1960:
+        if establishment_year < 1970:
             row[2] = "YES"
         else:
             row[2] = "NO"
